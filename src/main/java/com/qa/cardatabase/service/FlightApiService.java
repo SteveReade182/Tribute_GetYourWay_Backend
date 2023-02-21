@@ -1,6 +1,6 @@
 package com.qa.cardatabase.service;
 
-import com.qa.cardatabase.data.entity.Flight;
+import com.qa.cardatabase.data.entity.Flight.Flight;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 public class FlightApiService {
-    private static final String API_URL = "https://app.goflightlabs.com/search-all-flights";
+    private static final String API_URL = "https://app.goflightlabs.com/search-best-flights";
 
     public List<Flight> getOutboundFlights() {
         RestTemplate restTemplate = new RestTemplate();
@@ -32,3 +32,9 @@ public class FlightApiService {
 // &destination=KEF
 // &departureDate=2023-02-24
 
+//https://app.goflightlabs.com/search-best-flights?
+// access_key=YOUR_ACCESS_KEY
+// &adults=1
+// &origin=MAD
+// &destination=FCO
+// &departureDate=2023-03-03

@@ -1,7 +1,8 @@
 package com.qa.cardatabase.web;
 
-import com.qa.cardatabase.data.entity.Flight;
+import com.qa.cardatabase.data.entity.Flight.Flight;
 import com.qa.cardatabase.service.FlightApiService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,9 @@ public class FlightController {
     }
 
     @GetMapping("/flights/outbound")
-    public List<Flight> getOutboundFlights() {
-        return flightService.getOutboundFlights();
+    public ResponseEntity<List<Flight>> getOutboundFlights() {
+        List<Flight> flights = flightService.getOutboundFlights();
+        return ResponseEntity.ok(flights);
     }
+
 }
