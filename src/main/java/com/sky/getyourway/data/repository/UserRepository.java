@@ -1,6 +1,6 @@
-package com.qa.cardatabase.data.repository;
+package com.sky.getyourway.data.repository;
 
-import com.qa.cardatabase.data.entity.User;
+import com.sky.getyourway.data.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Long> {

@@ -1,4 +1,4 @@
-package com.qa.cardatabase.service;
+package com.sky.getyourway.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.qa.cardatabase.data.entity.User;
-import com.qa.cardatabase.data.repository.UserRepository;
+import com.sky.getyourway.data.entity.User;
+import com.sky.getyourway.data.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{

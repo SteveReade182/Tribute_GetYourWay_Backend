@@ -1,4 +1,4 @@
-package com.qa.cardatabase;
+package com.sky.getyourway;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
