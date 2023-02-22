@@ -1,5 +1,5 @@
-package com.qa.cardatabase.service;
-import com.qa.cardatabase.data.entity.Weather;
+package com.sky.getyourway.service;
+import com.sky.getyourway.data.entity.Weather;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 

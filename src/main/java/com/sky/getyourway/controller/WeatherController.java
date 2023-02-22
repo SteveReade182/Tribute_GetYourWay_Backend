@@ -1,7 +1,7 @@
-package com.qa.cardatabase.web;
+package com.sky.getyourway.controller;
 
-import com.qa.cardatabase.data.entity.Weather;
-import com.qa.cardatabase.service.WeatherResponseService;
+import com.sky.getyourway.data.entity.Weather;
+import com.sky.getyourway.service.WeatherResponseService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
