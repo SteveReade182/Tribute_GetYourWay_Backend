@@ -3,6 +3,8 @@ import com.sky.getyourway.data.entity.Weather;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
@@ -29,7 +31,12 @@ public class WeatherResponseService implements WeatherService {
                 String jsonString = sb.toString();
                 JSONObject json = new JSONObject(jsonString);
                 double temperature = json.getJSONObject("main").getDouble("temp");
-                return new Weather(temperature);
+                double celsiusTemperature = temperature - 273.15;
+
+                BigDecimal roundedTemperature = new BigDecimal(celsiusTemperature).setScale(2, RoundingMode.CEILING);
+                double roundedValue = roundedTemperature.doubleValue();
+
+                return new Weather(roundedValue);
             }
         } catch (Exception e) {
             e.printStackTrace();
