@@ -1,4 +1,4 @@
-package com.qa.cardatabase;
+package com.sky.getyourway;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
-import com.qa.cardatabase.service.AuthenticationService;
+import com.sky.getyourway.service.AuthenticationService;
 
 // GenericFilterBean is a generic superclass for any type of filter
 // This will handle authentication for all endpoints except /login

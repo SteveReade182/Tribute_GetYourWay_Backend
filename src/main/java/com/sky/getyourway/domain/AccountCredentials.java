@@ -1,4 +1,4 @@
-package com.qa.cardatabase.domain;
+package com.sky.getyourway.domain;
 
 public class AccountCredentials {
 	private String username;

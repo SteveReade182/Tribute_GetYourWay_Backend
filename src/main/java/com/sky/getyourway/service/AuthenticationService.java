@@ -1,4 +1,4 @@
-package com.qa.cardatabase.service;
+package com.sky.getyourway.service;
 
 import java.util.Date;
 
