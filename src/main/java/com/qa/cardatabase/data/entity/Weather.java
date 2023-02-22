@@ -1,6 +1,5 @@
 package com.qa.cardatabase.data.entity;
 
-
 public class Weather {
 
     private String weather;
