@@ -15,6 +15,8 @@ import com.qa.cardatabase.data.repository.OwnerRepository;
 import com.qa.cardatabase.data.entity.User;
 import com.qa.cardatabase.data.repository.UserRepository;
 
+import com.qa.cardatabase.service.FlightApiService;
+
 @SpringBootApplication
 public class CardatabaseApplication {
 	

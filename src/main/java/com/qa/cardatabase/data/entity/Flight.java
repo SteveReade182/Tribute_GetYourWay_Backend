@@ -15,16 +15,22 @@ public class Flight{
     public Date departureTime;
         public Date arrivalTime;
 
+        public String duration;
+
 
     public Flight() {
     }
 
-    public Flight(String flightNumber, String departureAirport, String arrivalAirport, Date departureTime, Date arrivalTime) {
+    public Flight(String flightNumber, String departureAirport, String arrivalAirport, Date departureTime, Date arrivalTime, String duration) {
         this.flightNumber = flightNumber;
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
+        this.duration = duration;
+    }
+
+    public Flight(String duration) {
     }
 
     public String getFlightNumber() {
@@ -67,5 +73,12 @@ public class Flight{
         this.arrivalTime = arrivalTime;
     }
 
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
 }
 
