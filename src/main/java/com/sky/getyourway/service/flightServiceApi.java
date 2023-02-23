@@ -76,14 +76,22 @@ public class flightServiceApi implements FlightService {
         switch (iataCodeDestinationAirport){
             case  "DBV":
                 destinationAirportName = "Dubrovnik Airport";
+                break;
             case  "MAD":
                 destinationAirportName = "Adolfo Suárez Madrid-Barajas Airport";
+                break;
             case  "YEG":
                 destinationAirportName = "Edmonton International Airport";
+                break;
             case  "YYC":
                 destinationAirportName = "Calgary International Airport";
+                break;
             case "CTA":
                 destinationAirportName = "Catania–Fontanarossa Airport";
+                break;
+            case "ITO":
+                destinationAirportName = "Hilo International Airport";
+                break;
         }
 
 
