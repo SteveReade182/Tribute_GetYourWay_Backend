@@ -40,6 +40,26 @@ public class GetYourWayApp {
 		user_repository.save(new User("user",
 				"$2a$10$6CJhx.freP/GXr56EItYJeVc2r9P3o/ns/adeKBAuf8d65Y8qz2qi",
 				"USER"));
+
+		user_repository.save(new User("steve",
+				"$2a$10$4PvjxalON1iur1hRDqUJXOo9zeWdCTSMOJNWiMHBapNcHGxIdUI4y",
+				"USER"));
+
+		user_repository.save(new User("baz",
+				"$2a$10$ItVVjC8b3zBkC.Kqa5XDyuQ.tF455hxqPCALOHbr5Iahaoa5n17V2",
+				"USER"));
+
+		user_repository.save(new User("chit",
+				"$2a$10$.KZK6UwR7QIValPjJCwJUOZPGafeR0VgHiickTwTSx5MOlNemgrfa",
+				"USER"));
+
+		user_repository.save(new User("ant",
+				"$2a$10$lnZg5GI3O/RnOvXumxZRJONshT0UziwM5j1PXpun4aNDcbbUQ0JKa",
+				"USER"));
+
+		user_repository.save(new User("corey",
+				"$2a$10$N8iJhUYz76ND1SbLk3Wa9OetmKL5qqHxIZ7npEpG9Yhe9N4rVuL.C",
+				"USER"));
 		};
 	}
 	
