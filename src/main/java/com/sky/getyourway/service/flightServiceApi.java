@@ -41,7 +41,71 @@ public class flightServiceApi implements FlightService {
             System.exit(-1);
         }
 
-        return durationOutput;
+        String inputString = durationOutput;
+
+// Extract hour and minute values from input string
+        int hours = 0;
+        int minutes = 0;
+
+        int hourIndex = inputString.indexOf("H");
+        int minuteIndex = inputString.indexOf("M");
+
+        if (hourIndex > 0) {
+            hours = Integer.parseInt(inputString.substring(2, hourIndex));
+        }
+
+        if (minuteIndex > 0) {
+            minutes = Integer.parseInt(inputString.substring(hourIndex + 1, minuteIndex));
+        }
+// Airport codes used for 1st iteration and testing
+        String iataCodeOutboundAirport = f.getDeparture();
+        String iataCodeDestinationAirport = f.getDestination();
+
+        String outboundAirportName = "";
+        String destinationAirportName = "";
+
+        switch (iataCodeOutboundAirport){
+            case "LHR":
+                outboundAirportName = "London Heathrow Airport";
+                break;
+            case "LGW":
+                outboundAirportName = "London Gatwick Airport";
+                break;
+        }
+
+        switch (iataCodeDestinationAirport){
+            case  "DBV":
+                destinationAirportName = "Dubrovnik Airport";
+            case  "MAD":
+                destinationAirportName = "Adolfo Suárez Madrid-Barajas Airport";
+            case  "YEG":
+                destinationAirportName = "Edmonton International Airport";
+            case  "YYC":
+                destinationAirportName = "Calgary International Airport";
+            case "CTA":
+                destinationAirportName = "Catania–Fontanarossa Airport";
+        }
+
+
+
+// Format output string using extracted values
+        String outputString = "The flight duration is ";
+
+        if (hours > 0) {
+            outputString += hours + " Hours ";
+        }
+
+        if (minutes > 0) {
+            outputString += minutes + " minutes";
+        }
+
+        if (hours == 0 && minutes == 0) {
+            outputString += "0 minutes";
+        }
+
+        outputString += " departing from " + outboundAirportName + " and arriving at " + destinationAirportName + ".";
+
+        return outputString;
     }
 
 }
